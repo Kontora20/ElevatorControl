@@ -94,6 +94,7 @@ namespace ElevatorControl.Services
             }
 
             await OperateDoors(elevator);
+            elevator.ElevatorStatus = ElevatorStatus.IDLE;
         }
 
         private async Task MoveUp(int destinationFloor, Elevator elevator)
@@ -110,6 +111,7 @@ namespace ElevatorControl.Services
             }
 
             await OperateDoors(elevator);
+            elevator.ElevatorStatus = ElevatorStatus.IDLE;
         }
 
         private async Task OperateDoors(Elevator elevator)
